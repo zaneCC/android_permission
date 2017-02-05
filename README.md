@@ -1,21 +1,23 @@
-[aspectjx]:https://github.com/HujiangTechnology/gradle_plugin_android_aspectjx
 
-Android_Permission_AspectjX
-------------
 简单，方便的Android M动态权限配置框架，基于AOP方式[aspectjx]，支持类，方法的权限配置，更中意的是支持依赖库里的Activity的权限配置，你不再担心依赖第三方库出现权限问题怎么办了。
 
 # 依赖
-
-gradle 依赖
+在你的根路径下的 build.gradle 里添加：
+```
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
 
 ```
-compile 'com.firefly1126.permissionaspect:permissionaspect:1.0.1'
-
+在你的app路径下的 build.gradle 里添加：
 ```
-
-[最新版本查看这里](http://jcenter.bintray.com/com/firefly1126/permissionaspect/permissionaspect/)
-
-该库必须配合[aspectjx]使用
+	dependencies {
+	        compile 'com.github.zaneCC:android_permission:1.0.0'
+	}
+```
 
 # 使用
 
